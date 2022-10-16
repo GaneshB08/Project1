@@ -1,0 +1,15 @@
+<script>
+    var record = new Promise((res,rej)=>{
+        console.log(typeof res,typeof rej);
+        //res("Mission accomplish")
+        rej("Lag gaye")
+    })
+    console.log(record);
+    record.then((value)=>{
+        console.log(value);  //this will handle your resolved value
+    }).catch((error)=>{
+        console.log(error);
+    }).finally(()=>{
+        console.log("Lets go for next one");
+    })
+</script>
